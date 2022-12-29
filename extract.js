@@ -73,6 +73,7 @@ console.log(Texts)
 const jsonString = JSON.stringify(Texts);
 console.log(jsonString)
 
+console.save(jsonString)
 // Print the extracted text
 // console.log(text);
 
