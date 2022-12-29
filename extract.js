@@ -70,7 +70,8 @@ XPaths.forEach(xpath => {
 });
 console.log(Texts)
 
-
+const jsonString = JSON.stringify(Texts);
+console.log(jsonString)
 
 // Print the extracted text
 // console.log(text);
