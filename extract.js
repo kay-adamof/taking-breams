@@ -63,14 +63,9 @@ function makeTexts(XPaths) {
 // Extract the text from the XPath
 const XPath = '/html/body/div[2]/div[5]/div[3]/div/div[1]/div[5]/div[2]/article/div[2]/h2/a/span'
 let XPaths = makeXPaths(XPath)
-let xpath0= XPaths[0]
-console.log(xpath0)
-let text0 = extractTextFromXPath(xpath0)
-console.log(text0)
-let xpath1= XPaths[1]
-console.log(xpath1)
-let text1 = extractTextFromXPath(xpath1)
-console.log(text1)
+XPaths.forEach(xpath => {
+    console.log(extractTextFromXPath(xpath))
+});
 
 
 
