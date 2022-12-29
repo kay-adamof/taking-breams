@@ -45,10 +45,13 @@ function extractTextFromXPath(xpath) {
 }
 
 // Extract the text from the XPath
-let text = extractTextFromXPath('/html/body/div[2]/div[5]/div[3]/div/div[1]/div[5]/div[2]/article/div[2]/h2/a/span');
+const XPath = '/html/body/div[2]/div[5]/div[3]/div/div[1]/div[5]/div[2]/article/div[2]/h2/a/span'
+let text = extractTextFromXPath(XPath);
+
+
 
 // Print the extracted text
 console.log(text);
 
-console.save(text)
+// console.save(text)
 
