@@ -44,9 +44,9 @@ function extractTextFromXPath(xpath) {
     return text;
 }
 
-function makeXPaths(xpath) {
+function makeXPaths(xpath, n) {
     let XPaths = [];
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= n; i++) {
         let updatedXPath = xpath.replace(xpath, `/html/body/div[2]/div[5]/div[3]/div/div[1]/div[5]/div[${i}]/article/div[2]/h2/a/span`);
         XPaths.push(updatedXPath)
     }
@@ -62,7 +62,8 @@ function makeTexts(XPaths) {
 }
 // Extract the text from the XPath
 const XPath = '/html/body/div[2]/div[5]/div[3]/div/div[1]/div[5]/div[2]/article/div[2]/h2/a/span'
-let XPaths = makeXPaths(XPath)
+const articleQuantity = 10
+let XPaths = makeXPaths(XPath, articleQuantity)
 let Texts =[]
 XPaths.forEach(xpath => {
     console.log(extractTextFromXPath(xpath))
